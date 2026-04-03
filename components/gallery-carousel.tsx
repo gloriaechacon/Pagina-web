@@ -1,75 +1,96 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import useEmblaCarousel from "embla-carousel-react"
-import AutoPlay from "embla-carousel-autoplay"
+import Image from "next/image"
 
 export default function GalleryCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [AutoPlay()])
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+  // 6 imágenes válidas seleccionadas (excluida image.png)
+  const images = [
+    '/images/Imagen1.jpeg',
+    '/images/Imagen2.jpeg',
+    '/images/Imagen3.jpeg',
+    '/images/Imagen4.jpeg',
+    '/images/Imagen6.jpeg',
+    '/images/Imagen7.jpeg'
+  ]
 
-  const scrollPrev = () => emblaApi?.scrollPrev()
-  const scrollNext = () => emblaApi?.scrollNext()
+  const [currentPage, setCurrentPage] = useState(0)
+  const imagesPerView = 3
+  const totalPages = Math.ceil(images.length / imagesPerView)
 
-  const onSelect = () => {
-    if (!emblaApi) return
-    setPrevBtnDisabled(!emblaApi.canScrollPrev())
-    setNextBtnDisabled(!emblaApi.canScrollNext())
+  // Obtener las imágenes para la página actual
+  const currentImages = images.slice(
+    currentPage * imagesPerView,
+    (currentPage + 1) * imagesPerView
+  )
+
+  const handlePrevious = () => {
+    setCurrentPage((prev) => (prev > 0 ? prev - 1 : totalPages - 1))
   }
 
-  useEffect(() => {
-    if (!emblaApi) return
-    onSelect()
-    emblaApi.on("select", onSelect)
-    emblaApi.on("reInit", onSelect)
-  }, [emblaApi])
+  const handleNext = () => {
+    setCurrentPage((prev) => (prev < totalPages - 1 ? prev + 1 : 0))
+  }
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">Galería</h2>
 
+        {/* Galería */}
         <div className="relative">
-          <div className="overflow-hidden rounded-2xl" ref={emblaRef}>
-            <div className="flex">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className="flex-[0_0_100%] min-w-0">
-                  <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center rounded-2xl">
-                    <div className="text-center">
-                      <div className="text-6xl font-bold text-blue-300 mb-4">{i + 1}</div>
-                      <span className="text-gray-500 text-lg">Imagen {i + 1}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Contenedor de imágenes */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {currentImages.map((image, index) => (
+              <div
+                key={`${currentPage}-${index}`}
+                className="relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-gray-100"
+              >
+                <Image
+                  src={image}
+                  alt={`Galería imagen ${currentPage * imagesPerView + index + 1}`}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={currentPage === 0}
+                />
+              </div>
+            ))}
           </div>
 
-          {/* Navigation Buttons */}
-          <button
-            onClick={scrollPrev}
-            disabled={prevBtnDisabled}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white disabled:opacity-50 rounded-full p-3 transition-all shadow-md hover:shadow-lg"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-6 h-6 text-gray-900" />
-          </button>
+          {/* Botones de navegación */}
+          <div className="flex justify-center items-center gap-4 mt-12">
+            <button
+              onClick={handlePrevious}
+              className="p-3 bg-white border-2 border-gray-200 hover:border-[#1e7a9e] text-gray-900 hover:text-[#1e7a9e] rounded-full transition-colors shadow-md hover:shadow-lg"
+              aria-label="Imagen anterior"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
 
-          <button
-            onClick={scrollNext}
-            disabled={nextBtnDisabled}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white disabled:opacity-50 rounded-full p-3 transition-all shadow-md hover:shadow-lg"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-6 h-6 text-gray-900" />
-          </button>
-        </div>
+            {/* Indicador de página */}
+            <div className="text-center min-w-[120px]">
+              <span className="text-sm font-medium text-gray-600">
+                {currentPage + 1} de {totalPages}
+              </span>
+            </div>
 
-        {/* Carousel Info */}
-        <div className="text-center mt-8 text-gray-600">
-          <p className="text-sm">Desplácese automáticamente • Use las flechas para navegar</p>
+            <button
+              onClick={handleNext}
+              className="p-3 bg-white border-2 border-gray-200 hover:border-[#1e7a9e] text-gray-900 hover:text-[#1e7a9e] rounded-full transition-colors shadow-md hover:shadow-lg"
+              aria-label="Siguiente imagen"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Información */}
+          <div className="text-center mt-8 text-gray-600">
+            <p className="text-sm">
+              Mostrando {currentImages.length} de {images.length} imágenes • Navegación manual
+            </p>
+          </div>
         </div>
       </div>
     </section>
