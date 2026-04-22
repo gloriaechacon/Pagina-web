@@ -41,7 +41,7 @@ export default function Header() {
             <div className="w-12 h-12 bg-gradient-to-br from-[#1e7a9e] to-[#2596be] rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">AT</span>
             </div>
-            <span className="font-semibold text-gray-900 hidden sm:block">Psicóloga</span>
+            <span className="font-semibold text-gray-900 hidden sm:block">Psicóloga Alicia Tse Kwan</span>
           </Link>
 
           {/* Desktop Navigation */}

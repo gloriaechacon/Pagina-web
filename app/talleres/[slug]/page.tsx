@@ -153,7 +153,7 @@ export default async function WorkshopDetailPage({ params }: WorkshopPageProps) 
             Volver a talleres
           </Link>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">{workshop.title}</h1>
-          <p className="text-xl text-gray-800 max-w-2xl">{workshop.description}</p>
+          <p className="text-xl sm:text-2xl font-semibold text-gray-800 text-center mb-8">{workshop.description}</p>
         </div>
       </section>
 
@@ -162,47 +162,46 @@ export default async function WorkshopDetailPage({ params }: WorkshopPageProps) 
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <div className="bg-blue-50 p-8 rounded-2xl border border-blue-200 mb-12 whitespace-pre-wrap">
-              <p className="text-gray-700 leading-relaxed">{workshop.fullContent}</p>
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">{workshop.fullContent}</p>
             </div>
 
             {workshop.benefits && (
               <>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Beneficios del Taller</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">Beneficios del Taller</h2>
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                   {workshop.benefits.map((benefit, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <span className="text-[#88c930] font-bold text-xl mt-1">✓</span>
-                      <span className="text-gray-700">{benefit}</span>
+                      <span className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </>
             )}
 
-            {workshop.duration && (
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 mb-8">
-                <h3 className="font-semibold text-gray-900 mb-2">Duración</h3>
-                <p className="text-gray-700">{workshop.duration}</p>
-              </div>
-            )}
-
-            {workshop.modality && (
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 mb-8">
-                <h3 className="font-semibold text-gray-900 mb-2">Modalidades</h3>
-                <p className="text-gray-700">{workshop.modality}</p>
+            {workshop.duration && workshop.modality && (
+              <div className="grid grid-cols-2 gap-4 text-center mt-4 mb-8">
+                <div>
+                  <p className="text-lg sm:text-xl font-semibold text-gray-900">Duración</p>
+                  <p className="text-lg sm:text-xl text-gray-800 mt-1">{workshop.duration}</p>
+                </div>
+                <div>
+                  <p className="text-lg sm:text-xl font-semibold text-gray-900">Modalidad</p>
+                  <p className="text-lg sm:text-xl text-gray-800 mt-1">{workshop.modality}</p>
+                </div>
               </div>
             )}
           </div>
 
           {/* CTA */}
           <div className="mt-16 bg-gradient-to-r from-[#88c930] to-[#9fd63e] text-gray-900 p-12 rounded-2xl text-center">
-            <h3 className="text-2xl font-bold mb-4">¿Te interesa este taller?</h3>
-            <p className="mb-8">
+            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">¿Te interesa este taller?</h3>
+            <p className="text-lg sm:text-xl text-gray-900 leading-relaxed text-justify mb-6">
               Contáctame para conocer las próximas fechas, horarios y modalidades disponibles.
             </p>
             <Link href="/#contacto">
-              <Button className="bg-white text-[#88c930] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full">
-                Contactar ahora <ArrowRight className="ml-2 w-4 h-4" />
+              <Button className="bg-white text-black hover:bg-gray-100 font-semibold px-10 py-4 rounded-full text-lg">
+                Contactar ahora <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
@@ -218,10 +217,10 @@ export default async function WorkshopDetailPage({ params }: WorkshopPageProps) 
               .filter(([key]) => key !== slug)
               .slice(0, 2)
               .map(([key, data]) => (
-                <Link key={key} href={`/talleres/${key}`} className="block p-6 bg-white rounded-xl hover:shadow-lg transition-shadow border border-gray-200">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{data.title}</h3>
-                  <p className="text-gray-700 mb-4 text-sm">{data.description}</p>
-                  <span className="text-[#88c930] font-semibold flex items-center gap-2 text-sm">
+                <Link key={key} href={`/talleres/${key}`} className="block p-6 bg-white rounded-xl hover:shadow-lg transition-shadow border border-gray-200 text-center">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">{data.title}</h3>
+                  <p className="text-lg sm:text-xl text-gray-800 leading-relaxed mb-6">{data.description}</p>
+                  <span className="text-[#88c930] font-semibold flex items-center gap-2">
                     Ver taller <ArrowRight className="w-4 h-4" />
                   </span>
                 </Link>
@@ -229,8 +228,8 @@ export default async function WorkshopDetailPage({ params }: WorkshopPageProps) 
           </div>
           <div className="mt-8 text-center">
             <Link href="/talleres">
-              <Button className="bg-[#88c930] hover:bg-[#9fd63e] text-gray-900 font-semibold px-8 py-3 rounded-full">
-                Ver todos los talleres <ArrowRight className="ml-2 w-4 h-4" />
+              <Button className="bg-[#88c930] hover:bg-[#9fd63e] text-gray-900 font-semibold px-10 py-4 rounded-full text-lg">
+                Ver todos los talleres <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>

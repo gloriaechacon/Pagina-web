@@ -48,7 +48,7 @@ export default function ServicesPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 text-balance">
             Servicios Profesionales
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">
             Acompañamiento integral en tu proceso de bienestar emocional y crecimiento personal
           </p>
         </div>
@@ -60,8 +60,8 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service) => (
               <Card key={service.id} className="bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow flex flex-col">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-700 leading-relaxed mb-6 flex-grow">{service.shortDescription}</p>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">{service.title}</h3>
+                <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6 flex-grow">{service.shortDescription}</p>
                 <Link href={service.href} className="inline-block">
                   <Button className="bg-gradient-to-r from-[#1e7a9e] to-[#2596be] hover:from-[#2596be] hover:to-[#1e7a9e] text-white font-semibold px-6 py-3 rounded-full w-full">
                     Más información <ArrowRight className="ml-2 w-4 h-4" />
@@ -80,18 +80,18 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg">
               <div className="text-3xl font-bold text-[#1e7a9e] mb-2">30+</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Años de Experiencia</h3>
-              <p className="text-gray-700">Trayectoria profesional comprobada en psicoterapia y desarrollo personal</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Años de Experiencia</h3>
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">Trayectoria profesional comprobada en psicoterapia y desarrollo personal</p>
             </div>
             <div className="bg-white p-6 rounded-lg">
               <div className="text-3xl font-bold text-[#1e7a9e] mb-2">100%</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Personalizado</h3>
-              <p className="text-gray-700">Cada sesión es adaptada a tus necesidades específicas y contexto</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Personalizado</h3>
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">Cada sesión es adaptada a tus necesidades específicas y contexto</p>
             </div>
             <div className="bg-white p-6 rounded-lg">
               <div className="text-3xl font-bold text-[#1e7a9e] mb-2">Flexible</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Modalidades</h3>
-              <p className="text-gray-700">Online y presencial para tu comodidad y accesibilidad</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Modalidades</h3>
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">Online y presencial para tu comodidad y accesibilidad</p>
             </div>
           </div>
         </div>
