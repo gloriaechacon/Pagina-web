@@ -46,13 +46,13 @@ export default function HeroSection() {
 
           <div className="flex flex-row justify-center items-center gap-3 w-full pb-10">
             <Link href="/servicios">
-              <Button className="bg-gradient-to-r from-[#9fd63e] to-[#88c930] text-gray-900 font-semibold px-5 py-3 sm:px-8 sm:py-6 rounded-full">
+              <Button className="bg-gradient-to-r from-[#9fd63e] to-[#88c930] text-gray-900 text-lg font-semibold px-5 py-3 sm:px-8 sm:py-6 rounded-full">
                 Servicios <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
 
             <Link href="/#contacto">
-              <Button className="bg-white/85 text-black border font-semibold px-5 py-3 sm:px-8 sm:py-6 rounded-full">
+              <Button className="bg-white/85 text-black border text-lg font-semibold px-5 py-3 sm:px-8 sm:py-6 rounded-full">
                 Contáctame
               </Button>
             </Link>

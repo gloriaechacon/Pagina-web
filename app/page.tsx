@@ -7,6 +7,8 @@ import HeroSection from "@/components/sections/hero-section"
 import AboutSection from "@/components/sections/about-section"
 import SpecialtiesSection from "@/components/sections/specialties-section"
 import ContactSection from "@/components/sections/contact-section"
+import TestimonialsSection from "@/components/sections/testimonials-section"
+import ServicesCTASection from "@/components/sections/services-cta-section"
 
 export default function HomePage() {
   return (
@@ -24,6 +26,12 @@ export default function HomePage() {
 
       {/* Gallery Carousel */}
       <GalleryCarousel />
+
+      {/* Services CTA Section */}
+      <ServicesCTASection />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Contact Section */}
       <ContactSection />

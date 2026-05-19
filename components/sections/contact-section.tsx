@@ -11,16 +11,16 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">Ubicación</h3>
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed text-justify mb-6">Belgrano, Buenos Aires</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-white text-left mb-8">Ubicación</h3>
+              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed text-left mb-6">Belgrano, Buenos Aires</p>
             </div>
             <div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">WhatsApp</h3>
+              <h3 className="text-xl sm:text-2xl font-semibold text-white text-left mb-8">WhatsApp</h3>
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg sm:text-xl text-gray-300 leading-relaxed text-justify mb-6 hover:text-[#9fd63e] transition-colors block"
+                className="text-lg sm:text-xl text-gray-300 leading-relaxed text-left mb-6 hover:text-[#9fd63e] transition-colors block"
               >
                 +54 9 11 2250 3604
               </a>

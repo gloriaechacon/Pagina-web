@@ -41,14 +41,14 @@ export default function Header() {
             <div className="w-12 h-12 bg-gradient-to-br from-[#1e7a9e] to-[#2596be] rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-lg">AT</span>
             </div>
-            <span className="font-semibold text-gray-900 hidden sm:block">Psicóloga Alicia Tse Kwan</span>
+            <span className="text-lg font-semibold text-gray-900 hidden sm:block">Psicóloga Alicia Tse Kwan</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             <Link
               href="/"
-              className={`text-sm font-medium transition-colors ${
+              className={`text-base font-medium transition-colors ${
                 isActive("/") ? "text-[#1e7a9e]" : "text-gray-600 hover:text-[#1e7a9e]"
               }`}
             >
@@ -58,7 +58,7 @@ export default function Header() {
             {/* Services Dropdown */}
             <div className="relative group">
               <button
-                className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+                className={`text-base font-medium transition-colors flex items-center gap-1 ${
                   pathname.includes("/servicios") ? "text-[#1e7a9e]" : "text-gray-600 group-hover:text-[#1e7a9e]"
                 }`}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
@@ -82,14 +82,14 @@ export default function Header() {
                   <Link
                     key={service.href}
                     href={service.href}
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1e7a9e] transition-colors border-b last:border-b-0"
+                    className="block px-4 py-3 text-base text-gray-700 hover:bg-blue-50 hover:text-[#1e7a9e] transition-colors border-b last:border-b-0"
                   >
                     {service.label}
                   </Link>
                 ))}
                 <Link
                   href="/servicios"
-                  className="block px-4 py-3 text-sm font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
+                  className="block px-4 py-3 text-base font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
                 >
                   Ver todos los servicios →
                 </Link>
@@ -99,7 +99,7 @@ export default function Header() {
             {/* Workshops Dropdown */}
             <div className="relative group">
               <button
-                className={`text-sm font-medium transition-colors flex items-center gap-1 ${
+                className={`text-base font-medium transition-colors flex items-center gap-1 ${
                   pathname.includes("/talleres") ? "text-[#1e7a9e]" : "text-gray-600 group-hover:text-[#1e7a9e]"
                 }`}
                 onMouseEnter={() => setWorkshopsDropdownOpen(true)}
@@ -123,14 +123,14 @@ export default function Header() {
                   <Link
                     key={workshop.href}
                     href={workshop.href}
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#1e7a9e] transition-colors border-b last:border-b-0"
+                    className="block px-4 py-3 text-base text-gray-700 hover:bg-blue-50 hover:text-[#1e7a9e] transition-colors border-b last:border-b-0"
                   >
                     {workshop.label}
                   </Link>
                 ))}
                 <Link
                   href="/talleres"
-                  className="block px-4 py-3 text-sm font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
+                  className="block px-4 py-3 text-base font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
                 >
                   Ver todos los talleres →
                 </Link>
@@ -139,7 +139,7 @@ export default function Header() {
 
             <Link
               href="/#contacto"
-              className={`text-sm font-medium transition-colors ${
+              className={`text-base font-medium transition-colors ${
                 isActive("/#contacto") ? "text-[#1e7a9e]" : "text-gray-600 hover:text-[#1e7a9e]"
               }`}
             >
@@ -158,7 +158,7 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-gray-100 bg-white">
             <Link
               href="/"
-              className={`block w-full text-left px-4 py-3 text-sm font-medium transition-colors ${
+              className={`block w-full text-left px-4 py-3 text-base font-medium transition-colors ${
                 isActive("/") ? "text-[#1e7a9e] bg-blue-50" : "text-gray-600 hover:bg-gray-50"
               }`}
               onClick={() => setIsMenuOpen(false)}
@@ -170,7 +170,7 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                className={`w-full text-left px-4 py-3 text-sm font-medium transition-colors flex items-center justify-between ${
+                className={`w-full text-left px-4 py-3 text-base font-medium transition-colors flex items-center justify-between ${
                   pathname.includes("/servicios") ? "text-[#1e7a9e] bg-blue-50" : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
@@ -185,7 +185,7 @@ export default function Header() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block w-full text-left px-8 py-2 text-sm text-gray-700 hover:text-[#1e7a9e] hover:bg-blue-50 transition-colors"
+                      className="block w-full text-left px-8 py-2 text-base text-gray-700 hover:text-[#1e7a9e] hover:bg-blue-50 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {service.label}
@@ -193,7 +193,7 @@ export default function Header() {
                   ))}
                   <Link
                     href="/servicios"
-                    className="block w-full text-left px-8 py-2 text-sm font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
+                    className="block w-full text-left px-8 py-2 text-base font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Ver todos los servicios →
@@ -206,7 +206,7 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setMobileWorkshopsOpen(!mobileWorkshopsOpen)}
-                className={`w-full text-left px-4 py-3 text-sm font-medium transition-colors flex items-center justify-between ${
+                className={`w-full text-left px-4 py-3 text-base font-medium transition-colors flex items-center justify-between ${
                   pathname.includes("/talleres") ? "text-[#1e7a9e] bg-blue-50" : "text-gray-600 hover:bg-gray-50"
                 }`}
               >
@@ -221,7 +221,7 @@ export default function Header() {
                     <Link
                       key={workshop.href}
                       href={workshop.href}
-                      className="block w-full text-left px-8 py-2 text-sm text-gray-700 hover:text-[#1e7a9e] hover:bg-blue-50 transition-colors"
+                      className="block w-full text-left px-8 py-2 text-base text-gray-700 hover:text-[#1e7a9e] hover:bg-blue-50 transition-colors"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {workshop.label}
@@ -229,7 +229,7 @@ export default function Header() {
                   ))}
                   <Link
                     href="/talleres"
-                    className="block w-full text-left px-8 py-2 text-sm font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
+                    className="block w-full text-left px-8 py-2 text-base font-semibold text-[#1e7a9e] hover:bg-blue-50 transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Ver todos los talleres →
@@ -240,7 +240,7 @@ export default function Header() {
 
             <Link
               href="/#contacto"
-              className={`block w-full text-left px-4 py-3 text-sm font-medium transition-colors ${
+              className={`block w-full text-left px-4 py-3 text-base font-medium transition-colors ${
                 isActive("/#contacto") ? "text-[#1e7a9e] bg-blue-50" : "text-gray-600 hover:bg-gray-50"
               }`}
               onClick={() => setIsMenuOpen(false)}
