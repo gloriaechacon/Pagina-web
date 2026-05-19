@@ -142,7 +142,7 @@ export default function GalleryCarousel() {
   }
 
   return (
-    <section className="pt-20 pb-0 mb-0 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="pt-12 pb-0 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
           Galería
@@ -156,7 +156,7 @@ export default function GalleryCarousel() {
         */}
         <div
           ref={viewportRef}
-          className={`relative h-[420px] sm:h-[500px] lg:h-[600px] overflow-hidden${
+          className={`relative h-[220px] sm:h-[300px] lg:h-[380px] overflow-hidden${
             viewportWidth === 0 ? " invisible" : ""
           }`}
           style={{
