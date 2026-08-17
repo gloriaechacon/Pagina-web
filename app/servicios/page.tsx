@@ -36,6 +36,15 @@ export default function ServicesPage() {
       fullDescription:
         "Experiencias de capacitación vivencial diseñadas para el crecimiento integral en distintas áreas de la vida.",
     },
+    {
+      id: 4,
+      title: "Sesiones de Coaching",
+      shortDescription:
+        "Acompañamiento enfocado en objetivos para potenciar tu desarrollo personal y profesional.",
+      href: "/servicios/coaching",
+      fullDescription:
+        "Un proceso centrado en el presente y el futuro, orientado a que definas objetivos claros y desarrolles las herramientas necesarias para alcanzarlos.",
+    },
   ]
 
   return (
@@ -57,7 +66,7 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service) => (
               <Card key={service.id} className="bg-white border border-gray-200 p-8 rounded-2xl hover:shadow-lg transition-shadow flex flex-col">
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">{service.title}</h3>

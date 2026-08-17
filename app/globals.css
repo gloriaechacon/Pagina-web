@@ -125,3 +125,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Thin, always-visible scrollbar used for testimonial cards with long text */
+  .testimonial-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #1e7a9e transparent;
+  }
+  .testimonial-scroll::-webkit-scrollbar {
+    width: 5px;
+  }
+  .testimonial-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .testimonial-scroll::-webkit-scrollbar-thumb {
+    background-color: #1e7a9e;
+    border-radius: 9999px;
+  }
+}

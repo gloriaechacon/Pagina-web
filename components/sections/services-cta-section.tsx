@@ -1,26 +1,22 @@
 import Link from "next/link"
 
 const pills = [
-  { label: "Consulta Individual",     href: "/servicios/consulta-individual" },
-  { label: "Terapia de Pareja",       href: "/servicios/consulta-pareja" },
-  { label: "Talleres de Crecimiento", href: "/servicios/talleres-desarrollo-personal" },
-  { label: "Manejo de Ansiedad",      href: "/servicios" },
-  { label: "Duelo y Pérdida",         href: "/servicios" },
-  { label: "Desarrollo Personal",     href: "/servicios" },
-  { label: "Comunicación Asertiva",   href: "/servicios" },
-  { label: "Mindfulness",             href: "/servicios" },
+  { label: "Consulta Individual",             href: "/servicios/consulta-individual" },
+  { label: "Terapia de Pareja",                href: "/servicios/consulta-pareja" },
+  { label: "Talleres de Desarrollo Personal",  href: "/servicios/talleres-desarrollo-personal" },
+  { label: "Sesiones de Coaching",             href: "/servicios/coaching" },
 ]
 
 export default function ServicesCTASection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
           ¿En qué puedo ayudarte?
         </h2>
 
         <p className="text-gray-600 text-xl mb-10">
-          Cada proceso es único. Explorá las áreas en las que trabajamos juntos.
+          Cada proceso es único. Explora las áreas en las que trabajamos juntos.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">

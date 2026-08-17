@@ -101,8 +101,8 @@ export default function ConsultaIndividualPage() {
               </span>
             </Link>
             <Link href="/servicios/talleres-desarrollo-personal" className="block p-6 bg-white rounded-xl hover:shadow-lg transition-shadow border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Talleres de Desarrollo Personal</h3>
-              <p className="text-gray-700 mb-4">Experiencias vivenciales transformadoras</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Talleres de Desarrollo Personal</h3>
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">Experiencias vivenciales transformadoras</p>
               <span className="text-[#1e7a9e] font-semibold flex items-center gap-2">
                 Ver servicio <ArrowRight className="w-4 h-4" />
               </span>

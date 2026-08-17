@@ -8,13 +8,13 @@ export default function AboutSection() {
         </p>
         <div className="prose prose-lg max-w-none text-left">
           <p className="text-gray-800 text-lg sm:text-xl leading-relaxed mb-6 text-justify">
-            Hola, mi nombre es Carmen Alicia Tse Kwan, ante todo, soy una persona comprometida con mi vocación, tengo tres maravillosos hijos, un esposo y compañero de vida increíble y muchos amigos de años.
+            Bienvenidos, mi nombre es Carmen Alicia Tse Kwan, ante todo, soy una persona comprometida con mi vocación, tengo tres maravillosos hijos, un esposo y compañero de vida increíble y muchos amigos de años.
           </p>
           <p className="text-gray-800 text-lg sm:text-xl leading-relaxed mb-6 text-justify">
-            Les cuento que soy una profesional venezolana radicada en Argentina, me gradué en el 1994, en la prestigiosa UCV, realicé dos especialidades en Organización de Empresas y Dinámica de grupo, así como otros estudios vinculados con mi profesión.
+            Les cuento que soy una profesional venezolana radicada en Argentina, me gradué como Licenciada en Psicología en el 1994, en la prestigiosa Universidad Central de Venezuela (UCV), realicé dos especialidades en Organización de Empresas y Dinámica de grupo, así como otros estudios vinculados con mi profesión.
           </p>
           <p className="text-gray-800 text-lg sm:text-xl leading-relaxed mb-6 text-justify">
-            Trabajé en la Universidad Nacional Abierta durante 21 años ocupando diferentes cargos supervisores en el área de recursos humanos, y he ejercido la profesión de psicología principalmente en el ámbito clínico.
+            Trabajé en la Universidad Nacional Abierta durante 21 años ocupando diferentes cargos supervisores en el área de Recursos Humanos, y he ejercido la profesión de psicología principalmente en el ámbito clínico.
           </p>
         </div>
       </div>

@@ -19,6 +19,7 @@ export default function Header() {
     { label: "Consulta individual", href: "/servicios/consulta-individual" },
     { label: "Consulta en pareja", href: "/servicios/consulta-pareja" },
     { label: "Talleres de desarrollo personal", href: "/servicios/talleres-desarrollo-personal" },
+    { label: "Coaching", href: "/servicios/coaching" },
   ]
 
   const workshops = [

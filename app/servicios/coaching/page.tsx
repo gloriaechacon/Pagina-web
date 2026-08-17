@@ -6,7 +6,7 @@ import Link from "next/link"
 import { ArrowRight, ArrowLeft } from "lucide-react"
 import ContactSection from "@/components/sections/contact-section"
 
-export default function ConsultaParejasPage() {
+export default function CoachingPage() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -18,9 +18,9 @@ export default function ConsultaParejasPage() {
             <ArrowLeft className="w-4 h-4" />
             Volver a servicios
           </Link>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Consulta en Pareja</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">Sesiones de Coaching</h1>
           <p className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">
-            Mejora la comunicación y fortalece los vínculos de pareja
+            Acompañamiento enfocado en objetivos para potenciar tu desarrollo personal y profesional
           </p>
         </div>
       </section>
@@ -29,65 +29,55 @@ export default function ConsultaParejasPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">¿Qué es la Consulta en Pareja?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">¿Qué son las Sesiones de Coaching?</h2>
 
             <div className="bg-blue-50 p-8 rounded-2xl border border-blue-200 mb-12">
               <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-                Cuando uno de los miembros de la pareja solicita terapia conmigo, inicio el proceso explorando de manera individual el punto de vista de cada integrante, brindando un espacio seguro para la expresión personal.
+                El coaching es un proceso de acompañamiento centrado en el presente y el futuro, orientado a que definas objetivos claros y desarrolles las herramientas necesarias para alcanzarlos. A través de preguntas poderosas y un espacio de escucha activa, te ayudo a identificar tus fortalezas, superar bloqueos y diseñar un plan de acción concreto.
               </p>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">El Proceso Terapéutico</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Mi Enfoque: Coaching Ontológico</h2>
             <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              Posteriormente, se realizan encuentros conjuntos con el objetivo de favorecer una comunicación más clara y respetuosa, promover la comprensión mutua y trabajar en la resolución de conflictos. Este espacio es completamente seguro y avalado por profesionalismo.
+              Como Coach Ontológico, trabajo desde la premisa de que el lenguaje y las conversaciones que sostenemos con nosotros mismos y con los demás moldean nuestra forma de actuar. Integro esta mirada con herramientas de Programación Neurolingüística (PNL) y Análisis Transaccional para ayudarte a transformar patrones que ya no te sirven y potenciar tu desempeño.
             </p>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Mi Abordaje</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">El Proceso</h2>
             <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              El abordaje terapéutico está orientado a diseñar y fortalecer espacios de diálogo que contribuyan al bienestar emocional y el crecimiento de la pareja. No se trata solo de resolver conflictos, sino de construir una relación más sólida y amorosa.
+              Cada sesión de coaching parte de tus objetivos específicos, ya sean personales, profesionales o de proyecto de vida. Juntos definimos metas medibles, exploramos los obstáculos que se interponen en tu camino y diseñamos acciones concretas para avanzar, con seguimiento en cada encuentro.
             </p>
-
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Beneficios</h2>
-            <ul className="list-disc list-inside space-y-3 text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              <li>Mejora significativa en la comunicación diaria</li>
-              <li>Mayor comprensión mutua y empatía</li>
-              <li>Resolución efectiva de conflictos</li>
-              <li>Fortalecimiento del vínculo emocional</li>
-              <li>Recuperación de la intimidad</li>
-              <li>Herramientas prácticas para mantener la armonía</li>
-            </ul>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Modalidades Disponibles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Online</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-                  A través de Zoom o Google Meet. Ideal para parejas con horarios ocupados.
+                  A través de Zoom o Google Meet. Ideal para quienes buscan flexibilidad de horarios.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Presencial</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-                  En Belgrano, Buenos Aires. Para una experiencia más inmediata.
+                  En Belgrano, Buenos Aires. Para quienes prefieren un encuentro cara a cara.
                 </p>
               </div>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">¿Cuándo considerar una Consulta de Pareja?</h2>
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">¿Para quién es útil?</h2>
             <ul className="list-disc list-inside space-y-3 text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              <li>Cuando la comunicación se ha deteriorado</li>
-              <li>Enfrentando crisis o conflictos recurrentes</li>
-              <li>Antes de tomar decisiones importantes sobre la relación</li>
-              <li>Para fortalecer un vínculo ya existente</li>
-              <li>Después de eventos traumáticos que afectaron la relación</li>
+              <li>Profesionales que buscan mejorar su desempeño y liderazgo</li>
+              <li>Personas en transición o cambio de carrera</li>
+              <li>Quienes desean definir y alcanzar metas personales concretas</li>
+              <li>Emprendedores que necesitan claridad y foco en sus proyectos</li>
+              <li>Quienes buscan mejorar su comunicación y toma de decisiones</li>
             </ul>
           </div>
 
           {/* CTA */}
           <div className="mt-16 bg-gradient-to-r from-[#1e7a9e] to-[#2596be] text-white p-12 rounded-2xl text-center">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">Recupera la armonía en tu relación</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">Impulsa tu próximo objetivo</h3>
             <p className="text-lg sm:text-xl text-white leading-relaxed text-justify mb-6">
-              Contáctame para agendar una sesión inicial y comenzar este viaje transformador juntos.
+              Contáctame para agendar tu primera sesión de coaching y comenzar a diseñar el camino hacia tus metas.
             </p>
             <Link href="/#contacto">
               <Button className="bg-white text-[#1e7a9e] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full">
@@ -101,18 +91,18 @@ export default function ConsultaParejasPage() {
       {/* Related Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">Otros Servicios</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-12">Otros Servicios</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link href="/servicios/consulta-individual" className="block p-6 bg-white rounded-xl hover:shadow-lg transition-shadow border border-gray-200">
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Consulta Individual</h3>
-              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed mb-6">Acompañamiento personalizado en tu bienestar</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Consulta Individual</h3>
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">Acompañamiento personalizado en tu bienestar</p>
               <span className="text-[#1e7a9e] font-semibold flex items-center gap-2">
                 Ver servicio <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
             <Link href="/servicios/talleres-desarrollo-personal" className="block p-6 bg-white rounded-xl hover:shadow-lg transition-shadow border border-gray-200">
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Talleres de Desarrollo Personal</h3>
-              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed mb-6">Experiencias vivenciales transformadoras</p>
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Talleres de Desarrollo Personal</h3>
+              <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">Experiencias vivenciales transformadoras</p>
               <span className="text-[#1e7a9e] font-semibold flex items-center gap-2">
                 Ver servicio <ArrowRight className="w-4 h-4" />
               </span>

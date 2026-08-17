@@ -32,7 +32,7 @@ export default function HeroSection() {
 
           <div className="sticky top-16 md:top-14 z-20 flex justify-center pt-4">
             <div className="flex flex-wrap items-center justify-center gap-3 text-center">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
                 Psicóloga Alicia Tse Kwan
               </h1>
 

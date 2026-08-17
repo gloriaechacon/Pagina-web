@@ -58,6 +58,12 @@ const testimonials = [
     role: "Venezolana",
     initials: "AL",
   },
+  {
+    text: "Recomiendo ampliamente su trabajo. Es una psicóloga muy empática, dedicada y cercana, alguien que transmite la tranquilidad que uno como padre necesita. Gracias a su apoyo, mi hijo ha mostrado avances muy positivos. Sin duda, una gran elección para el bienestar de él.",
+    name: "María Teresa",
+    role: "",
+    initials: "MT",
+  },
 ]
 
 const N = testimonials.length
@@ -71,11 +77,14 @@ type Testimonial = (typeof testimonials)[number]
 function TestimonialCard({ text, name, role, initials }: Testimonial) {
   return (
     // h-full + flex-col lets the card fill the fixed track height.
-    // flex-1 overflow-hidden on the text clips long quotes instead of
-    // overflowing, while flex-shrink-0 on the author row keeps it always visible.
+    // flex-1 overflow-y-auto on the text lets long quotes scroll internally
+    // instead of being clipped, while flex-shrink-0 on the author row keeps
+    // it always visible at the bottom of the card.
     <div className="bg-white rounded-2xl border border-gray-200 shadow-md p-8 h-full flex flex-col overflow-hidden">
       <span className="text-[#1e7a9e] text-3xl font-bold leading-none block mb-2">❝</span>
-      <p className="text-gray-800 text-lg leading-relaxed flex-1 overflow-hidden">{text}</p>
+      <p className="testimonial-scroll text-gray-800 text-lg leading-relaxed flex-1 overflow-y-auto overscroll-contain pr-2">
+        {text}
+      </p>
       <div className="border-t border-gray-100 mt-4 pt-4 flex items-center gap-3 flex-shrink-0">
         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#1e7a9e] to-[#2596be] text-white font-bold text-sm flex items-center justify-center shrink-0">
           {initials}
@@ -148,9 +157,9 @@ export default function TestimonialsSection() {
   const tx = `${TRANSITION_MS}ms ease-in-out`
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#1e7a9e]/10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">
           Testimonios
         </h2>
 
