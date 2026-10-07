@@ -21,12 +21,14 @@ const COUNTRIES = [
   { code: "BR", dial: "+55", flag: "🇧🇷" },
   { code: "US", dial: "+1", flag: "🇺🇸" },
   { code: "IT", dial: "+39", flag: "🇮🇹" },
+  { code: "OTHER", dial: "custom", flag: "🌐" },
 ] as const
 
 type FormValues = {
   name: string
   reason: string
   countryDial: string
+  customDial: string
   localPhone: string
 }
 
@@ -36,8 +38,9 @@ function normalizeDigits(value: string) {
   return value.replace(/[^\d]/g, "")
 }
 
-function buildFullPhone(countryDial: string, localPhone: string) {
-  return `${countryDial}${normalizeDigits(localPhone)}`
+function buildFullPhone(countryDial: string, customDial: string, localPhone: string) {
+  const dial = countryDial === "custom" ? `+${normalizeDigits(customDial)}` : countryDial
+  return `${dial}${normalizeDigits(localPhone)}`
 }
 
 function validate(values: FormValues): FormErrors {
@@ -51,7 +54,7 @@ function validate(values: FormValues): FormErrors {
     errors.reason = "Contame brevemente el motivo de tu consulta (mínimo 10 caracteres)."
   }
 
-  if (!/^\+\d{8,15}$/.test(buildFullPhone(values.countryDial, values.localPhone))) {
+  if (!/^\+\d{8,15}$/.test(buildFullPhone(values.countryDial, values.customDial, values.localPhone))) {
     errors.phone = "Ingresá un número de teléfono completo y válido."
   }
 
@@ -63,6 +66,7 @@ function ContactForm() {
     name: "",
     reason: "",
     countryDial: COUNTRIES[0].dial,
+    customDial: "",
     localPhone: "",
   })
   const [errors, setErrors] = useState<FormErrors>({})
@@ -70,7 +74,7 @@ function ContactForm() {
 
   function handleChange(field: keyof FormValues, value: string) {
     setValues((current) => ({ ...current, [field]: value }))
-    const errorKey = field === "localPhone" || field === "countryDial" ? "phone" : field
+    const errorKey = field === "localPhone" || field === "countryDial" || field === "customDial" ? "phone" : field
     if (errors[errorKey]) setErrors((current) => ({ ...current, [errorKey]: undefined }))
   }
 
@@ -89,14 +93,14 @@ function ContactForm() {
         body: JSON.stringify({
           _subject: "Nueva consulta desde la web — Alicia Tse Kwan",
           Nombre: values.name.trim(),
-          Teléfono: buildFullPhone(values.countryDial, values.localPhone),
+          Teléfono: buildFullPhone(values.countryDial, values.customDial, values.localPhone),
           "Motivo de consulta": values.reason.trim(),
         }),
       })
 
       if (response.ok) {
         setStatus("success")
-        setValues({ name: "", reason: "", countryDial: COUNTRIES[0].dial, localPhone: "" })
+        setValues({ name: "", reason: "", countryDial: COUNTRIES[0].dial, customDial: "", localPhone: "" })
       } else {
         setStatus("error")
       }
@@ -168,10 +172,22 @@ function ContactForm() {
               >
                 {COUNTRIES.map((country) => (
                   <option key={country.code} value={country.dial}>
-                    {country.flag} {country.dial}
+                    {country.flag} {country.dial === "custom" ? "Otro" : country.dial}
                   </option>
                 ))}
               </select>
+              {values.countryDial === "custom" && (
+                <input
+                  id="contact-custom-dial"
+                  type="tel"
+                  inputMode="numeric"
+                  value={values.customDial}
+                  onChange={(event) => handleChange("customDial", event.target.value)}
+                  placeholder="+___"
+                  aria-label="Código internacional"
+                  className={`w-[90px] shrink-0 rounded-lg border px-3 py-2.5 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#1e7a9e] ${errors.phone ? "border-red-400" : "border-gray-300"}`}
+                />
+              )}
               <input
                 id="contact-phone"
                 type="tel"

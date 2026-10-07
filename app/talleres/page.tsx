@@ -26,21 +26,21 @@ export default function WorkshopsPage() {
     },
     {
       id: 3,
-      title: "Comunicación de manera asertiva",
+      title: "Comunicación asertiva: la clave de las relaciones interpersonales efectivas",
       shortDescription:
         "Expresa tus ideas y necesidades con claridad y respeto.",
       href: "/talleres/comunicacion-asertiva",
     },
     {
       id: 4,
-      title: "Amarse a sí mismo en amor toda la vida",
+      title: "Autoestima: la base fundamental del éxito personal",
       shortDescription:
         "Fortalece tu autoestima y tu relación contigo mismo.",
       href: "/talleres/amarse-a-si-mismo",
     },
     {
       id: 5,
-      title: "Gestión y balance del tiempo",
+      title: "Gestionar el tiempo de manera efectiva",
       shortDescription:
         "Prioriza lo importante y equilibra tus responsabilidades.",
       href: "/talleres/gestion-tiempo",
@@ -95,18 +95,15 @@ export default function WorkshopsPage() {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">¿Por qué asistir a mis talleres?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg text-center">
-              <div className="text-3xl font-bold text-[#88c930] mb-2">Vivencial</div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Experiencias Prácticas</h3>
+              <div className="text-3xl font-bold text-[#88c930] mb-6">Vivencial</div>
               <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-center mb-6">Dinámicas y ejercicios diseñados para aprendizajes profundos y transformadores</p>
             </div>
             <div className="bg-white p-6 rounded-lg text-center">
-              <div className="text-3xl font-bold text-[#88c930] mb-2">Colectivo</div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Conexión Meaningful</h3>
+              <div className="text-3xl font-bold text-[#88c930] mb-6">Interacción social</div>
               <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-center mb-6">Comparte con otros participantes en espacios seguros y contenedores</p>
             </div>
             <div className="bg-white p-6 rounded-lg text-center">
-              <div className="text-3xl font-bold text-[#88c930] mb-2">Integral</div>
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Crecimiento Completo</h3>
+              <div className="text-3xl font-bold text-[#88c930] mb-6">Crecimiento cognitivo y emocional</div>
               <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-center mb-6">Aborda múltiples dimensiones de tu desarrollo personal y profesional</p>
             </div>
           </div>

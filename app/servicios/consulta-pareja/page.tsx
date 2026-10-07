@@ -44,7 +44,7 @@ export default function ConsultaParejasPage() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Mi Abordaje</h2>
             <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              El abordaje terapéutico está orientado a diseñar y fortalecer espacios de diálogo que contribuyan al bienestar emocional y el crecimiento de la pareja. No se trata solo de resolver conflictos, sino de construir una relación más sólida y amorosa.
+              El abordaje terapéutico está orientado a diseñar y fortalecer espacios de diálogo que contribuyan al bienestar emocional y el crecimiento de la pareja. No se trata solo de resolver conflictos, sino de construir una relación fundamentada en un proyecto de pareja.
             </p>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Beneficios</h2>

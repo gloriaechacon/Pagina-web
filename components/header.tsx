@@ -25,9 +25,9 @@ export default function Header() {
   const workshops = [
     { label: "Planificando tu vida para el éxito", href: "/talleres/planificando-vida-exito" },
     { label: "Canalizar las emociones de manera efectiva", href: "/talleres/canalizar-emociones" },
-    { label: "Comunicación de manera asertiva", href: "/talleres/comunicacion-asertiva" },
-    { label: "Amarse a sí mismo en amor toda la vida", href: "/talleres/amarse-a-si-mismo" },
-    { label: "Gestión y balance del tiempo", href: "/talleres/gestion-tiempo" },
+    { label: "Comunicación asertiva: la clave de las relaciones interpersonales efectivas", href: "/talleres/comunicacion-asertiva" },
+    { label: "Autoestima: la base fundamental del éxito personal", href: "/talleres/amarse-a-si-mismo" },
+    { label: "Gestionar el tiempo de manera efectiva", href: "/talleres/gestion-tiempo" },
     { label: "Estimulación cognitiva para adultos mayores", href: "/talleres/estimulacion-cognitiva" },
   ]
 

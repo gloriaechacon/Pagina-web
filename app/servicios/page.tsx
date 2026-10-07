@@ -53,19 +53,19 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
+      <section className="pt-32 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 text-balance">
             Servicios Profesionales
           </h1>
-          <p className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">
+          <p className="text-xl sm:text-2xl font-semibold text-gray-900 text-center">
             Acompañamiento en tu proceso de bienestar emocional y crecimiento personal
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="pt-6 pb-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service) => (

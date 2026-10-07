@@ -77,8 +77,8 @@ export default function CoachingPage() {
       </section>
 
       <ContactFormSection
-        title="Impulsa tu próximo objetivo"
-        description="Contáctame para agendar tu primera sesión de coaching y comenzar a diseñar el camino hacia tus metas."
+        title="Comienza tu proceso hoy"
+        description="Contáctame para agendar tu primera consulta y dar el primer paso hacia tu bienestar."
       />
 
       {/* Related Services */}

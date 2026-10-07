@@ -2,7 +2,9 @@ export default function SpecialtiesSection() {
   const specialties = [
     "Autoestima",
     "Gestión emocional",
-    "Bullying",
+    "Bullying y Mobbing",
+    "Adicciones (alcohol, nicotina)",
+    "Mindfulness",
     "Crianza y educación",
     "Motivación al logro",
     "Resolución de conflictos",

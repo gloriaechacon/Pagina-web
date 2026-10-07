@@ -61,7 +61,7 @@ A través de dinámicas vivenciales, los participantes adquieren herramientas qu
     modality: "Online y Presencial",
   },
   "comunicacion-asertiva": {
-    title: "Comunicación de manera asertiva",
+    title: "Comunicación asertiva: la clave de las relaciones interpersonales efectivas",
     description: "Expresa tus ideas, emociones y necesidades con claridad y respeto",
     fullContent: `En todo contexto interpersonal, la comunicación es un factor esencial para construir relaciones saludables, mejorar la productividad y aumentar la efectividad, tanto en el ámbito personal como profesional. 
 
@@ -79,7 +79,7 @@ En este taller, los participantes adquieren herramientas prácticas para desarro
     modality: "Online y Presencial",
   },
   "amarse-a-si-mismo": {
-    title: "Amarse a sí mismo en amor toda la vida",
+    title: "Autoestima: la base fundamental del éxito personal",
     description: "Fortalece tu autoestima y tu relación contigo mismo",
     fullContent: `La autoestima es un pilar fundamental del bienestar y una de las claves principales del éxito en todos los ámbitos de la vida. Conocerse, valorarse y aceptarse de manera sana impacta directamente en la salud mental y física.
 
@@ -97,7 +97,7 @@ Se promueve una relación saludable contigo mismo que perdure a lo largo del tie
     modality: "Online y Presencial",
   },
   "gestion-tiempo": {
-    title: "Gestión y balance del tiempo",
+    title: "Gestionar el tiempo de manera efectiva",
     description: "Aprende a priorizar lo importante y equilibrar todas las áreas de tu vida",
     fullContent: `Uno de los recursos más importantes de la vida es el tiempo, y aprender a utilizarlo de manera consciente y sabia es un objetivo fundamental para el bienestar personal.
 

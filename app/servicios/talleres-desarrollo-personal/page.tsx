@@ -33,13 +33,13 @@ export default function TalleresDesarrolloPersonalPage() {
 
             <div className="bg-blue-50 p-8 rounded-2xl border border-blue-200 mb-12">
               <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-                Son experiencias de capacitación vivencial diseñadas para facilitar el crecimiento integral en distintas áreas de la vida. A través de dinámicas prácticas y reflexiones profundas, los participantes descubren nuevas perspectivas y adquieren herramientas para transformar su realidad.
+                Son experiencias de capacitación vivencial diseñadas para facilitar el crecimiento en distintas áreas de la vida. A través de dinámicas prácticas y reflexiones profundas, los participantes descubren nuevas perspectivas y adquieren herramientas para transformar su realidad.
               </p>
             </div>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Mi Metodología</h2>
             <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              Combino teoría y práctica en espacios seguros y contenedores, donde cada participante puede adquirir herramientas prácticas y sencillas para incorporar los cambios en su vida cotidiana.
+              Combino fundamentos teóricos basados en la psicología y dinámicas de grupo que estimulan la reflexión y donde el participante puede adquirir herramientas prácticas y sencillas para incorporar los cambios en su vida cotidiana.
             </p>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Beneficios de los Talleres</h2>
@@ -68,15 +68,15 @@ export default function TalleresDesarrolloPersonalPage() {
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed mb-6">Gestiona el estrés y mejora tu equilibrio emocional</p>
               </Link>
               <Link href="/talleres/comunicacion-asertiva" className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 hover:shadow-lg transition-shadow text-center">
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Comunicación de manera asertiva</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Comunicación asertiva: la clave de las relaciones interpersonales efectivas</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed mb-6">Expresa tus necesidades con claridad y respeto</p>
               </Link>
               <Link href="/talleres/amarse-a-si-mismo" className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 hover:shadow-lg transition-shadow text-center">
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Amarse a sí mismo en amor toda la vida</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Autoestima: la base fundamental del éxito personal</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed mb-6">Fortalece tu autoestima y relación contigo mismo</p>
               </Link>
               <Link href="/talleres/gestion-tiempo" className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 hover:shadow-lg transition-shadow text-center">
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Gestión y balance del tiempo</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-4">Gestionar el tiempo de manera efectiva</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed mb-6">Prioriza lo importante y organiza tu vida</p>
               </Link>
               <Link href="/talleres/estimulacion-cognitiva" className="p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200 hover:shadow-lg transition-shadow text-center">
@@ -102,8 +102,8 @@ export default function TalleresDesarrolloPersonalPage() {
       </section>
 
       <ContactFormSection
-        title="Comienza tu transformación hoy"
-        description="Inscríbete en uno de mis talleres y experimenta el cambio que buscas."
+        title="Comienza tu proceso hoy"
+        description="Inscríbete a uno de mis talleres y experimenta el cambio que buscas hoy."
       />
 
       {/* Related Services */}
