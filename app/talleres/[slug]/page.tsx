@@ -4,7 +4,8 @@ import Header from "@/components/header"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft } from "lucide-react"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 import { notFound } from "next/navigation"
 
 interface WorkshopPageProps {
@@ -193,20 +194,13 @@ export default async function WorkshopDetailPage({ params }: WorkshopPageProps) 
             )}
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-[#88c930] to-[#9fd63e] text-gray-900 p-12 rounded-2xl text-center">
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">¿Te interesa este taller?</h3>
-            <p className="text-lg sm:text-xl text-gray-900 leading-relaxed text-justify mb-6">
-              Contáctame para conocer las próximas fechas, horarios y modalidades disponibles.
-            </p>
-            <Link href="/#contacto">
-              <Button className="bg-white text-black hover:bg-gray-100 font-semibold px-10 py-4 rounded-full text-lg">
-                Contactar ahora <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
+
+      <ContactFormSection
+        title="¿Te interesa este taller?"
+        description="Contáctame para conocer las próximas fechas, horarios y modalidades disponibles."
+      />
 
       {/* Other Workshops */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -236,8 +230,7 @@ export default async function WorkshopDetailPage({ params }: WorkshopPageProps) 
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactSection />
+      <SiteFooter />
     </div>
   )
 }

@@ -6,7 +6,8 @@ import GalleryCarousel from "@/components/gallery-carousel"
 import HeroSection from "@/components/sections/hero-section"
 import AboutSection from "@/components/sections/about-section"
 import SpecialtiesSection from "@/components/sections/specialties-section"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 import TestimonialsSection from "@/components/sections/testimonials-section"
 import ServicesCTASection from "@/components/sections/services-cta-section"
 
@@ -33,8 +34,8 @@ export default function HomePage() {
       {/* Testimonials Section */}
       <TestimonialsSection />
 
-      {/* Contact Section */}
-      <ContactSection />
+      <ContactFormSection description="Escríbeme para agendar una consulta o solicitar información sobre los talleres." />
+      <SiteFooter />
     </div>
   )
 }

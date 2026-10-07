@@ -1,10 +1,10 @@
 "use client"
 
 import Header from "@/components/header"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft } from "lucide-react"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 
 export default function TalleresDesarrolloPersonalPage() {
   return (
@@ -39,14 +39,14 @@ export default function TalleresDesarrolloPersonalPage() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Mi Metodología</h2>
             <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              Combino teoría y práctica en espacios seguros y contenedores donde cada participante puede ser auténtico. Utilizo técnicas de Programación Neurolingüística, Análisis Transaccional y Gestalt para facilitar aprendizajes profundos que generan cambios reales.
+              Combino teoría y práctica en espacios seguros y contenedores, donde cada participante puede adquirir herramientas prácticas y sencillas para incorporar los cambios en su vida cotidiana.
             </p>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Beneficios de los Talleres</h2>
             <ul className="list-disc list-inside space-y-3 text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
               <li>Autoconocimiento profundo y reflexión personal</li>
               <li>Desarrollo de habilidades emocionales y sociales</li>
-              <li>Clarificación de objetivos y propósito de vida</li>
+              <li>Formulación de objetivos y propósito de vida</li>
               <li>Adquisición de herramientas prácticas aplicables inmediatamente</li>
               <li>Conexión significativa con otros participantes</li>
               <li>Recuperación de la motivación y energía vital</li>
@@ -55,7 +55,7 @@ export default function TalleresDesarrolloPersonalPage() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Talleres Disponibles</h2>
             <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              Ofrecemos una variedad de talleres temáticos que abordan diferentes áreas del desarrollo personal:
+              Ofrezco una variedad de talleres temáticos que abordan diferentes áreas del desarrollo personal:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
@@ -98,20 +98,13 @@ export default function TalleresDesarrolloPersonalPage() {
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-[#9fd63e] to-[#88c930] text-gray-900 p-12 rounded-2xl text-center">
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Comienza tu transformación hoy</h3>
-            <p className="text-lg sm:text-xl text-gray-900 leading-relaxed text-center mb-6">
-              Inscríbete en uno de nuestros talleres y experimenta el cambio que buscas.
-            </p>
-            <Link href="/#contacto">
-              <Button className="bg-white text-[#1e7a9e] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full">
-                Contactar ahora <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
+
+      <ContactFormSection
+        title="Comienza tu transformación hoy"
+        description="Inscríbete en uno de mis talleres y experimenta el cambio que buscas."
+      />
 
       {/* Related Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -136,8 +129,7 @@ export default function TalleresDesarrolloPersonalPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactSection />
+      <SiteFooter />
     </div>
   )
 }

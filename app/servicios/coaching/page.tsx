@@ -1,10 +1,10 @@
 "use client"
 
 import Header from "@/components/header"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft } from "lucide-react"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 
 export default function CoachingPage() {
   return (
@@ -73,20 +73,13 @@ export default function CoachingPage() {
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-[#1e7a9e] to-[#2596be] text-white p-12 rounded-2xl text-center">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">Impulsa tu próximo objetivo</h3>
-            <p className="text-lg sm:text-xl text-white leading-relaxed text-justify mb-6">
-              Contáctame para agendar tu primera sesión de coaching y comenzar a diseñar el camino hacia tus metas.
-            </p>
-            <Link href="/#contacto">
-              <Button className="bg-white text-[#1e7a9e] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full">
-                Contactar ahora <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
+
+      <ContactFormSection
+        title="Impulsa tu próximo objetivo"
+        description="Contáctame para agendar tu primera sesión de coaching y comenzar a diseñar el camino hacia tus metas."
+      />
 
       {/* Related Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -111,8 +104,7 @@ export default function CoachingPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactSection />
+      <SiteFooter />
     </div>
   )
 }

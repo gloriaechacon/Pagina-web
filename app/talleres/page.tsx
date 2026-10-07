@@ -5,7 +5,8 @@ import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 
 export default function WorkshopsPage() {
   const workshops = [
@@ -91,7 +92,7 @@ export default function WorkshopsPage() {
       {/* Why Workshops Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">¿Por qué asistir a nuestros talleres?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">¿Por qué asistir a mis talleres?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg text-center">
               <div className="text-3xl font-bold text-[#88c930] mb-2">Vivencial</div>
@@ -137,8 +138,8 @@ export default function WorkshopsPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactSection />
+      <ContactFormSection description="Escríbeme para solicitar información sobre fechas, horarios y modalidades." />
+      <SiteFooter />
     </div>
   )
 }

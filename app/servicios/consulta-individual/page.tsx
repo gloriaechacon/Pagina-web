@@ -1,10 +1,10 @@
 "use client"
 
 import Header from "@/components/header"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft } from "lucide-react"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 
 export default function ConsultaIndividualPage() {
   return (
@@ -39,7 +39,7 @@ export default function ConsultaIndividualPage() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Mi Enfoque Terapéutico</h2>
             <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              Según sea el caso a intervenir, aplico técnicas de Programación Neurolingüística (PNL), Terapia Cognitivo-Conductual y Análisis Transaccional, integrándolas de manera personalizada para ofrecerte las herramientas más efectivas.
+              Según sea el caso a intervenir, aplico técnicas de Terapia Gestáltica, Terapia Cognitivo-Conductual y Análisis Transaccional, integrándolas de manera personalizada para ofrecer las herramientas más efectivas para el cambio cognitivo y/o conductual.
             </p>
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">El Proceso</h2>
@@ -52,7 +52,7 @@ export default function ConsultaIndividualPage() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Online</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-                  A través de Zoom o Google Meet. Perfecta para quienes tienen disponibilidad limitada o prefieren desde la comodidad de su hogar.
+                  A través de Zoom o Google Meet. Esta modalidad es perfecta para quienes tienen poca disponibilidad de tiempo o que por razones geográficas prefieren la consulta desde su hogar.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
@@ -65,28 +65,23 @@ export default function ConsultaIndividualPage() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">¿Para quién es útil?</h2>
             <ul className="list-disc list-inside space-y-3 text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-              <li>Personas atravesando momentos difíciles o cambios importantes</li>
-              <li>Aquellos que desean mejorar su autoestima y seguridad personal</li>
-              <li>Personas enfrentando ansiedad, estrés o depresión</li>
-              <li>Quienes buscan herramientas para mejorar relaciones personales</li>
-              <li>Emprendedores y profesionales en búsqueda de equilibrio</li>
+              <li>Personas atravesando momentos difíciles o cambios vitales importantes</li>
+              <li>Aquellos que deseen mejorar su autoestima y confianza en sí mismos</li>
+              <li>Personas enfrentando situaciones que les producen ansiedad, estrés o depresión</li>
+              <li>Quienes busquen herramientas para mejorar sus relaciones interpersonales</li>
+              <li>Emprendedores y profesionales que deseen superar situaciones conflictivas en el área laboral</li>
+              <li>Padres o representantes de niños o adolescentes con crisis en los vínculos familiares</li>
+              <li>Personas en general que quieran incrementar sus niveles de bienestar adquiriendo herramientas psicológicas</li>
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-[#1e7a9e] to-[#2596be] text-white p-12 rounded-2xl text-center">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">Comienza tu proceso hoy</h3>
-            <p className="text-lg sm:text-xl text-white leading-relaxed text-justify mb-6">
-              Contáctame para agendar tu primera consulta y dar el primer paso hacia tu bienestar.
-            </p>
-            <Link href="/#contacto">
-              <Button className="bg-white text-[#1e7a9e] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full">
-                Contactar ahora <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
+
+      <ContactFormSection
+        title="Comienza tu proceso hoy"
+        description="Contáctame para agendar tu primera consulta y dar el primer paso hacia tu bienestar."
+      />
 
       {/* Related Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -111,8 +106,7 @@ export default function ConsultaIndividualPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactSection />
+      <SiteFooter />
     </div>
   )
 }

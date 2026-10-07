@@ -1,10 +1,10 @@
 "use client"
 
 import Header from "@/components/header"
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight, ArrowLeft } from "lucide-react"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 
 export default function ConsultaParejasPage() {
   return (
@@ -62,13 +62,13 @@ export default function ConsultaParejasPage() {
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Online</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-                  A través de Zoom o Google Meet. Ideal para parejas con horarios ocupados.
+                  A través de Zoom o Google Meet, ideal para parejas que se encuentran en zonas geográficas distantes.
                 </p>
               </div>
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl border border-blue-200">
                 <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">Presencial</h3>
                 <p className="text-lg sm:text-xl text-gray-800 leading-relaxed text-justify mb-6">
-                  En Belgrano, Buenos Aires. Para una experiencia más inmediata.
+                  En Belgrano, Buenos Aires, para una experiencia cara a cara.
                 </p>
               </div>
             </div>
@@ -83,20 +83,13 @@ export default function ConsultaParejasPage() {
             </ul>
           </div>
 
-          {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-[#1e7a9e] to-[#2596be] text-white p-12 rounded-2xl text-center">
-            <h3 className="text-xl sm:text-2xl font-semibold text-white text-center mb-8">Recupera la armonía en tu relación</h3>
-            <p className="text-lg sm:text-xl text-white leading-relaxed text-justify mb-6">
-              Contáctame para agendar una sesión inicial y comenzar este viaje transformador juntos.
-            </p>
-            <Link href="/#contacto">
-              <Button className="bg-white text-[#1e7a9e] hover:bg-gray-100 font-semibold px-8 py-3 rounded-full">
-                Contactar ahora <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
         </div>
       </section>
+
+      <ContactFormSection
+        title="Comienza tu proceso hoy"
+        description="Contáctame para agendar tu primera consulta y dar el primer paso hacia tu bienestar."
+      />
 
       {/* Related Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -121,8 +114,7 @@ export default function ConsultaParejasPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactSection />
+      <SiteFooter />
     </div>
   )
 }

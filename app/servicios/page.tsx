@@ -5,7 +5,8 @@ import { Card } from "@/components/ui/card"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import ContactSection from "@/components/sections/contact-section"
+import ContactFormSection from "@/components/sections/contact-form-section"
+import SiteFooter from "@/components/site-footer"
 
 export default function ServicesPage() {
   const services = [
@@ -13,7 +14,7 @@ export default function ServicesPage() {
       id: 1,
       title: "Consulta Individual",
       shortDescription:
-        "Sesiones personalizadas diseñadas para afrontar desafíos emocionales y personales con herramientas prácticas.",
+        "Son sesiones en las cuales te acompaño a afrontar situaciones personales, académicas y laborales, brindándote herramientas eficaces para resolver situaciones difíciles y recuperar tu bienestar.",
       href: "/servicios/consulta-individual",
       fullDescription:
         "En la primera consulta realizo una entrevista que me permite conocer al paciente, elaborar su historia clínica y explorar en profundidad los motivos de consulta.",
@@ -22,7 +23,7 @@ export default function ServicesPage() {
       id: 2,
       title: "Consulta en Pareja",
       shortDescription:
-        "Espacios seguros para mejorar la comunicación y fortalecer la relación de pareja.",
+        "Son encuentros seguros en los cuales ambos miembros de la pareja pueden comunicarse y resolver situaciones conflictivas con apoyo terapéutico enfocado en la resolución de problemas.",
       href: "/servicios/consulta-pareja",
       fullDescription:
         "Cuando uno de los miembros de la pareja solicita terapia conmigo, inicio el proceso explorando de manera individual el punto de vista de cada integrante.",
@@ -31,7 +32,7 @@ export default function ServicesPage() {
       id: 3,
       title: "Talleres de Desarrollo Personal",
       shortDescription:
-        "Talleres vivenciales para potenciar habilidades y alcanzar objetivos de crecimiento personal.",
+        "Implican el diseño y la facilitación de experiencias de aprendizaje que permiten adquirir herramientas para aplicar en los diferentes ámbitos de la vida.",
       href: "/servicios/talleres-desarrollo-personal",
       fullDescription:
         "Experiencias de capacitación vivencial diseñadas para el crecimiento integral en distintas áreas de la vida.",
@@ -58,7 +59,7 @@ export default function ServicesPage() {
             Servicios Profesionales
           </h1>
           <p className="text-xl sm:text-2xl font-semibold text-gray-900 text-center mb-8">
-            Acompañamiento integral en tu proceso de bienestar emocional y crecimiento personal
+            Acompañamiento en tu proceso de bienestar emocional y crecimiento personal
           </p>
         </div>
       </section>
@@ -85,7 +86,7 @@ export default function ServicesPage() {
       {/* Why Choose These Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">¿Por qué elegir nuestros servicios?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">¿Por qué elegir mis servicios?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg">
               <div className="text-3xl font-bold text-[#1e7a9e] mb-2">30+</div>
@@ -106,8 +107,8 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <ContactSection />
+      <ContactFormSection description="Escríbeme para agendar una consulta o solicitar más información sobre los servicios." />
+      <SiteFooter />
     </div>
   )
 }
